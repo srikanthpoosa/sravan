@@ -1,1 +1,0 @@
-echo Over and out
