@@ -23,10 +23,10 @@ stages:
         - agent.name -equals SREE-PC
     steps:
     - task: Docker@2
-      displayName: docker login
+      displayName: docker build and push
       inputs:
         containerRegistry: 'dockerhubconnection'
-        repository: 'firstrepo'
+        repository: 'devopsrepo'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         addBaseImageData: false
