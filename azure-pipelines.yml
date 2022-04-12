@@ -26,7 +26,10 @@ stages:
       displayName: docker login
       inputs:
         containerRegistry: 'dockerhubconnection'
-        command: 'login'
+        repository: 'firstrepo'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        addBaseImageData: false
     - task: PowerShell@2
       inputs:
         targetType: 'inline'
